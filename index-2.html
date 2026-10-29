@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#030b19">
+<title>Victorcharles Web Studio | Modern Website Design</title>
+<meta name="description" content="Victorcharles Web Studio designs modern, responsive websites for businesses, startups, SaaS products, and online stores.">
+<meta property="og:title" content="Victorcharles Web Studio">
+<meta property="og:description" content="Modern websites that turn ideas into opportunities.">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#030b19;--panel:#07162b;--panel2:#0a1c34;--blue:#0797ff;--cyan:#00d4ff;--purple:#792cff;--text:#f5f8ff;--muted:#a8b8d0;--line:#17375b;--green:#16d99b;--radius:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 78% 9%,rgba(0,101,255,.12),transparent 32%),radial-gradient(ellipse at 4% 42%,rgba(103,37,255,.08),transparent 30%),var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit}
+.container{width:min(1120px,calc(100% - 40px));margin-inline:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(3,11,25,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(67,125,190,.2)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.4px}
+.logo{height:43px;width:43px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,#00c8ff,#234cff 55%,#9b32ff);box-shadow:0 0 24px #1467ff44;font-size:14px;font-weight:900;position:relative}
+.logo:after{content:"</>";position:absolute;right:-5px;bottom:-2px;background:#07152a;border:1px solid #1b8eff;border-radius:7px;padding:1px 3px;font-size:9px;color:#62d9ff}
+.brand-name{display:block;font-size:15px;line-height:1.25}.brand-sub{display:block;color:#9eb5d3;font-size:11px;font-weight:500;letter-spacing:.6px}
+.navlinks{display:flex;gap:29px;align-items:center}.navlinks a{font-size:13px;color:#c4d1e4;transition:.2s}.navlinks a:hover,.navlinks a.active{color:#19baff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:999px;border:1px solid transparent;background:linear-gradient(110deg,#008cff,#0871f9);color:#fff;font-weight:750;font-size:13px;box-shadow:0 8px 28px #007bff24;transition:transform .2s,box-shadow .2s,border-color .2s;cursor:pointer}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px #007bff40}
+.btn-outline{background:transparent;border-color:#24517e;box-shadow:none}.btn-outline:hover{border-color:#159fff;background:#071a31}
+.menu-btn{display:none;background:transparent;border:1px solid var(--line);color:white;border-radius:10px;padding:8px 11px;font-size:20px}
+.hero{padding:70px 0 60px;overflow:hidden;border-bottom:1px solid rgba(67,125,190,.18)}
+.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:38px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid #17628a;border-radius:999px;background:#062238;color:#9feaff;font-size:10px;font-weight:800;letter-spacing:1px;margin-bottom:19px}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#13e5b1;box-shadow:0 0 12px #13e5b1}
+h1{font-size:clamp(38px,5vw,62px);line-height:1.06;letter-spacing:-2.4px;margin-bottom:20px;max-width:650px}
+.gradient-text{background:linear-gradient(90deg,#00bfff,#3985ff 55%,#b451ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-copy{max-width:525px;color:#b4c4da;font-size:15px;line-height:1.8;margin-bottom:26px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.trust-line{display:flex;align-items:center;gap:9px;color:#7f98b9;font-size:11px;margin-top:22px}
+.trust-line span{color:#30d7ac}
+.visual{min-height:320px;position:relative;display:grid;place-items:center}
+.glow{position:absolute;width:75%;height:75%;background:linear-gradient(135deg,#007dff,#6b27ff);filter:blur(70px);opacity:.25;border-radius:50%}
+.device{position:relative;width:100%;max-width:500px;transform:perspective(1000px) rotateY(-5deg);border:1px solid #1d8de0;border-radius:18px;background:#06142a;padding:9px;box-shadow:0 0 0 5px #0b2340,0 24px 75px #006eff25}
+.device-top{height:23px;display:flex;align-items:center;gap:5px;padding-left:7px}.device-top i{width:6px;height:6px;border-radius:50%;background:#315477}
+.mock-page{border:1px solid #183a62;border-radius:12px;overflow:hidden;background:linear-gradient(145deg,#081c39,#040b19);min-height:245px;padding:20px}
+.mock-nav{display:flex;justify-content:space-between;align-items:center;font-size:9px;color:#9cb7d7;border-bottom:1px solid #17375b;padding-bottom:14px}
+.mock-brand{font-weight:800;color:white;font-size:12px}.mock-menu{display:flex;gap:13px}.mock-pill{background:#134dff;color:white;padding:5px 8px;border-radius:5px}
+.mock-content{padding:25px 3px 10px;display:grid;grid-template-columns:1fr .8fr;gap:12px;align-items:center}
+.mock-content h3{font-size:clamp(20px,2.7vw,31px);line-height:1.1;letter-spacing:-1px;margin-bottom:10px}.mock-content p{font-size:9px;color:#9eb7d5;margin-bottom:14px}
+.mock-action{display:inline-block;background:#087df5;border-radius:20px;padding:6px 11px;font-size:9px}
+.mock-art{height:132px;border-radius:14px;background:radial-gradient(circle at 70% 20%,#a238ff,transparent 30%),linear-gradient(140deg,#073c95,#0768ff 45%,#28136d);position:relative;overflow:hidden}
+.mock-art:before,.mock-art:after{content:"";position:absolute;border:1px solid #9cdcff66;border-radius:50%;width:180px;height:180px;transform:rotate(-35deg);left:-20px;top:30px}
+.mock-art:after{width:130px;height:130px;left:25px;top:54px}
+.float-tag{position:absolute;right:0;bottom:14px;border:1px solid #1b5790;border-radius:12px;background:#06152b;padding:12px 15px;color:#dceeff;font-size:11px;box-shadow:0 12px 35px #0006}
+section{padding:65px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:25px}
+.kicker{font-size:10px;letter-spacing:1.6px;font-weight:850;color:#12bfff;margin-bottom:5px}
+h2{font-size:clamp(25px,3vw,34px);line-height:1.15;letter-spacing:-.8px}
+.section-intro{max-width:400px;color:var(--muted);font-size:13px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.card{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,rgba(9,28,51,.92),rgba(4,15,31,.94));padding:23px;transition:transform .2s,border-color .2s,background .2s}
+.card:hover{transform:translateY(-4px);border-color:#137ac2;background:linear-gradient(145deg,#0b2340,#061328)}
+.icon{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,#087dff,#5428ec);box-shadow:0 6px 20px #005bff35;font-size:20px;margin-bottom:17px}
+.card h3{font-size:16px;margin-bottom:9px}.card p{font-size:12px;color:#a9bdd6;line-height:1.75}
+.service-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:17px;color:#39baff;font-size:12px}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.project-card{padding:12px;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:center}
+.project-info{padding:8px 5px}.badge{display:inline-flex;border-radius:999px;padding:4px 9px;background:#063f6a;border:1px solid #147dc3;color:#bceeff;font-size:9px;font-weight:800;margin-bottom:10px}.badge.purple{background:#30175c;border-color:#7534cb;color:#e3caff}
+.project-info h3{font-size:20px;margin-bottom:4px}.project-type{font-size:10px;color:#4dc9ff;margin-bottom:10px}.project-info p{font-size:11px;color:#aabed6;line-height:1.65;margin-bottom:15px}
+.preview{min-height:180px;border-radius:12px;border:1px solid #234a70;overflow:hidden;background:#07182d;display:flex;flex-direction:column}
+.preview-top{height:20px;background:#10233c;display:flex;align-items:center;gap:4px;padding:0 8px}.preview-top i{width:5px;height:5px;border-radius:50%;background:#54708f}
+.preview-screen{flex:1;padding:14px 10px;background:radial-gradient(circle at 80% 25%,#173d8b,transparent 45%),#061022}
+.preview-logo{font-size:8px;color:#e8f4ff;font-weight:800;margin-bottom:16px}.preview-screen h4{font-size:17px;line-height:1.1;max-width:160px;margin-bottom:8px}.preview-screen p{font-size:7px;color:#a5bed9;max-width:150px;margin-bottom:12px}.preview-button{font-size:7px;background:#087dff;border-radius:10px;padding:4px 8px;display:inline-block}
+.preview.store{background:#f4f4f1;color:#151a21}.preview.store .preview-top{background:#fff}.preview.store .preview-screen{background:linear-gradient(90deg,#f7f7f5,#e6e7e4);color:#10131b}.preview.store .preview-logo{color:#10131b}.preview.store .preview-screen h4{font-size:15px}.preview.store .preview-screen p{color:#505761}.preview.store .preview-button{background:#101722;color:white}
+.project-actions{display:flex;gap:8px;flex-wrap:wrap}
+.project-actions .btn{padding:9px 13px;font-size:11px}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.benefit{display:flex;gap:13px;padding:16px;border:1px solid #153455;border-radius:14px;background:#06152a}
+.benefit .icon{flex:0 0 40px;width:40px;height:40px;margin:0;font-size:17px}
+.benefit h3{font-size:13px;margin-bottom:4px}.benefit p{font-size:11px;color:#9fb3cc;line-height:1.65}
+.about-grid{display:grid;grid-template-columns:1fr .85fr;gap:25px;align-items:center}
+.about-copy{color:#aebfd5;font-size:13px;line-height:1.9;margin-top:14px}.about-copy p+p{margin-top:10px}
+.about-panel{display:flex;align-items:center;gap:17px;padding:25px;border:1px solid #17416a;border-radius:20px;background:radial-gradient(circle at 15% 10%,#113d74,transparent 50%),#06152a}
+.about-emblem{flex:0 0 85px;width:85px;height:85px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#00c8ff,#244dff,#8a2aff);box-shadow:0 0 35px #2879ff40;font-size:21px;font-weight:900}
+.about-panel h3{font-size:16px}.about-panel p{font-size:11px;color:#a9bdd6;margin-top:5px}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.step{padding:18px;border:1px solid var(--line);border-radius:15px;background:#06152a}
+.step-number{font-size:11px;color:#1cbfff;font-weight:900;letter-spacing:1px;margin-bottom:12px}.step h3{font-size:14px;margin-bottom:7px}.step p{font-size:11px;color:#a6bad3;line-height:1.7}
+.contact-box{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px;border:1px solid #174c8b;border-radius:20px;background:linear-gradient(110deg,#082b68,#071a36 55%,#28105d);box-shadow:0 20px 60px #002b6d20}
+.contact-box p{font-size:12px;color:#c0d1e8;margin-top:8px;max-width:450px}
+.contact-links{display:flex;flex-wrap:wrap;gap:8px}.contact-links .btn{font-size:11px;padding:10px 13px}.contact-links .btn-outline{background:#071a31cc}.contact-icon-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px}.contact-icon{width:17px;height:17px;flex:0 0 17px;display:block}
+footer{border-top:1px solid #153454;padding:25px 0 30px}
+.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-desc{font-size:10px;color:#8da5c2;max-width:240px}.footer-nav{display:flex;gap:15px;flex-wrap:wrap}.footer-nav a{font-size:10px;color:#a7bad2}.copyright{font-size:10px;color:#7088a7;margin-top:15px}
+.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:90;padding:12px 16px;border-radius:12px;background:#102a48;border:1px solid #2477b8;color:white;font-size:12px;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:800px){.navlinks{gap:16px}.hero-grid{gap:22px}.hero{padding:52px 0}.project-card{grid-template-columns:1fr}.preview{order:-1;min-height:170px}.project-grid{gap:12px}.contact-box{align-items:flex-start;flex-direction:column}.process-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.container{width:min(100% - 30px,500px)}.nav{height:65px}.navlinks{display:none;position:absolute;top:64px;left:0;right:0;padding:18px 22px 22px;background:#041126;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:12px 4px;border-bottom:1px solid #102944}.nav-cta{display:none}.menu-btn{display:block}.hero{padding:42px 0 38px}.hero-grid{grid-template-columns:1fr;gap:25px}h1{font-size:42px;letter-spacing:-1.8px}.hero-copy{font-size:13px}.visual{min-height:255px}.device{transform:none}.mock-page{min-height:205px;padding:14px}.mock-content{padding-top:18px}.mock-art{height:105px}.float-tag{right:-3px;bottom:2px}section{padding:47px 0}.section-head{display:block}.section-intro{margin-top:10px}.services-grid,.project-grid,.why-grid,.about-grid{grid-template-columns:1fr}.card{padding:20px}.project-card{grid-template-columns:1fr 1fr;gap:10px}.project-info h3{font-size:18px}.preview{min-height:190px;order:0}.preview-screen h4{font-size:15px}.about-panel{padding:19px}.contact-box{padding:22px}.contact-links{width:100%}.contact-links .btn{flex:1}.footer-row{align-items:flex-start;flex-direction:column}.footer-nav{gap:17px}.brand-name{font-size:14px}}
+@media(max-width:390px){h1{font-size:36px}.project-card{grid-template-columns:1fr}.preview{order:-1;min-height:170px}.hero-actions .btn{width:100%}.contact-links .btn{flex-basis:42%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Victorcharles Web Studio home">
+      <span class="logo">VC</span><span><span class="brand-name">Victorcharles</span><span class="brand-sub">WEB STUDIO</span></span>
+    </a>
+    <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+      <a class="active" href="#home">Home</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn nav-cta" href="https://wa.me/2349045681648?text=Hello%20Victor%2C%20I%27d%20like%20to%20discuss%20a%20website%20project." target="_blank" rel="noopener">☏ &nbsp; Let's Talk</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+ <div class="container hero-grid">
+  <div>
+   <div class="eyebrow"><span class="dot"></span> WEB DESIGN &amp; DEVELOPMENT</div>
+   <h1>Websites That Turn <span class="gradient-text">Ideas Into Opportunities.</span></h1>
+   <p class="hero-copy">I design and build modern, responsive websites for businesses, startups, and entrepreneurs who want to establish a strong online presence and turn visitors into customers.</p>
+   <div class="hero-actions"><a class="btn" href="https://wa.me/2349045681648?text=Hello%20Victor%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20website%20project." target="_blank" rel="noopener">☏ &nbsp; Let's Work Together ↗</a><a class="btn btn-outline" href="#projects">View My Projects ↓</a></div>
+   <div class="trust-line"><span>✦</span> Thoughtful design · Mobile-first · Clear communication</div>
+  </div>
+  <div class="visual" aria-label="Decorative website interface preview">
+   <div class="glow"></div>
+   <div class="device">
+    <div class="device-top"><i></i><i></i><i></i></div>
+    <div class="mock-page">
+     <div class="mock-nav"><span class="mock-brand">BRAND<span style="color:#24baff">.</span></span><span class="mock-menu"><span>Home</span><span>Features</span><span>About</span></span><span class="mock-pill">Get Started</span></div>
+     <div class="mock-content"><div><h3>Build Your<br><span class="gradient-text">Next Big Idea.</span></h3><p>Modern websites for modern businesses.</p><span class="mock-action">Explore services ↗</span></div><div class="mock-art"></div></div>
+    </div>
+   </div>
+   <div class="float-tag">✦ &nbsp; Clean code<br>✦ &nbsp; Great design<br>✦ &nbsp; Built for mobile</div>
+  </div>
+ </div>
+</section>
+<section id="services">
+ <div class="container">
+  <div class="section-head"><div><div class="kicker">MY SERVICES</div><h2>What I Do</h2></div><p class="section-intro">Modern web solutions tailored to your business goals and the people you want to reach.</p></div>
+  <div class="services-grid">
+   <article class="card"><div class="icon">▣</div><h3>Business Website Design</h3><p>Professional, responsive websites that help businesses showcase their services, build credibility, and attract potential customers.</p><div class="service-bottom"><span>Responsive by design</span><span>↗</span></div></article>
+   <article class="card"><div class="icon">🚀</div><h3>SaaS Landing Pages</h3><p>Modern landing pages for software products and startups, designed to communicate value clearly and encourage visitors to take action.</p><div class="service-bottom"><span>Clear product messaging</span><span>↗</span></div></article>
+   <article class="card"><div class="icon">🛍</div><h3>E-commerce Website Design</h3><p>Beautiful online-store interfaces with product listings, categories, shopping-cart experiences, and a customer-friendly shopping journey.</p><div class="service-bottom"><span>Customer-first experience</span><span>↗</span></div></article>
+  </div>
+ </div>
+</section>
+<section id="projects" style="padding-top:25px">
+ <div class="container">
+  <div class="section-head"><div><div class="kicker">FEATURED PROJECTS</div><h2>Selected Projects</h2></div><p class="section-intro">Website concepts built to demonstrate thoughtful design, useful functionality, and modern user experiences.</p></div>
+  <div class="project-grid">
+   <article class="card project-card">
+    <div class="project-info"><span class="badge">DEMO PROJECT</span><h3>TaskFlow AI</h3><div class="project-type">SaaS Landing Page Concept</div><p>A modern landing-page concept for an AI-powered productivity platform, featuring a clear value proposition, product features, and conversion-focused design.</p><div class="project-actions"><button class="btn demo-btn" data-project="TaskFlow AI">View Demo ↗</button></div></div>
+    <div class="preview"><div class="preview-top"><i></i><i></i><i></i></div><div class="preview-screen"><div class="preview-logo">✦ TaskFlow AI</div><h4>Work Smarter,<br>Not Harder.</h4><p>Organize tasks, focus your time, and move your goals forward.</p><span class="preview-button">Get Started Free</span><div style="height:8px"></div><div style="height:5px;width:88%;background:#163b6b;border-radius:4px"></div><div style="height:5px;width:66%;background:#12335d;border-radius:4px;margin-top:5px"></div></div></div>
+   </article>
+   <article class="card project-card">
+    <div class="project-info"><span class="badge purple">DEMO PROJECT</span><h3>StyleNest</h3><div class="project-type">E-commerce Store Concept</div><p>A contemporary fashion-store concept featuring product categories, product cards, shopping-cart interactions, and a clean shopping experience.</p><div class="project-actions"><button class="btn demo-btn" data-project="StyleNest">View Demo ↗</button></div></div>
+    <div class="preview store"><div class="preview-top"><i></i><i></i><i></i></div><div class="preview-screen"><div class="preview-logo">◈ StyleNest</div><h4>Upgrade Your<br>Style Today.</h4><p>Discover everyday essentials and standout pieces.</p><span class="preview-button">Shop Now</span><div style="display:flex;gap:6px;margin-top:12px"><div style="height:35px;flex:1;border-radius:5px;background:#d6d9d7"></div><div style="height:35px;flex:1;border-radius:5px;background:#c9c9c3"></div><div style="height:35px;flex:1;border-radius:5px;background:#deded8"></div></div></div></div>
+   </article>
+  </div>
+  <p style="font-size:11px;color:#829ab8;margin-top:12px">These are concept projects. Demo links can be added here once each separate website is published.</p>
+ </div>
+</section>
+<section id="why" style="padding-top:30px">
+ <div class="container">
+  <div class="section-head"><div><div class="kicker">WHY WORK WITH ME</div><h2>Thoughtful Design.<br><span class="gradient-text">Practical Solutions.</span></h2></div><p class="section-intro">A practical, collaborative approach to building a website that represents your business well.</p></div>
+  <div class="why-grid">
+   <div class="benefit"><div class="icon">✧</div><div><h3>Modern Design</h3><p>Clean, contemporary interfaces designed to make a strong first impression.</p></div></div>
+   <div class="benefit"><div class="icon">▣</div><div><h3>Mobile-First Approach</h3><p>Websites designed to work smoothly across mobile phones, tablets, and desktop screens.</p></div></div>
+   <div class="benefit"><div class="icon">☏</div><div><h3>Clear Communication</h3><p>A straightforward process that keeps project goals, expectations, and next steps clear.</p></div></div>
+   <div class="benefit"><div class="icon">◎</div><div><h3>Business-Focused Thinking</h3><p>Design decisions that help visitors understand your services and take the next step.</p></div></div>
+  </div>
+ </div>
+</section>
+<section id="about" style="padding-top:30px">
+ <div class="container about-grid">
+  <div><div class="kicker">ABOUT ME</div><h2>About Victor Charles</h2><div class="about-copy"><p>I'm a web designer focused on creating modern, responsive digital experiences for businesses, startups, and entrepreneurs.</p><p>My goal is to help ideas become clear, professional websites that communicate value, build trust, and make it easier for people to connect with a business.</p><p>Through Victorcharles Web Studio, I aim to combine thoughtful design, practical functionality, and clear communication to create websites that serve real business needs.</p></div></div>
+  <div class="about-panel"><div class="about-emblem">VC<span style="font-size:11px;display:block;margin-left:-18px;margin-top:25px">&lt;/&gt;</span></div><div><h3>Victorcharles Web Studio</h3><p>Creating modern digital experiences for businesses, startups, and entrepreneurs.</p><a class="btn btn-outline" href="#contact" style="margin-top:14px;padding:9px 13px;font-size:11px">Get in touch ↗</a></div></div>
+ </div>
+</section>
+<section id="process" style="padding-top:30px">
+ <div class="container">
+  <div class="section-head"><div><div class="kicker">MY PROCESS</div><h2>How I Work</h2></div><p class="section-intro">A simple, clear process from the first conversation to launch.</p></div>
+  <div class="process-grid">
+   <article class="step"><div class="step-number">01 / DISCOVERY</div><h3>Understand</h3><p>Understand your business, audience, goals, and website requirements.</p></article>
+   <article class="step"><div class="step-number">02 / DESIGN</div><h3>Plan the Experience</h3><p>Plan the layout, visual direction, content structure, and user experience.</p></article>
+   <article class="step"><div class="step-number">03 / BUILD</div><h3>Develop</h3><p>Develop the responsive website and implement the agreed features.</p></article>
+   <article class="step"><div class="step-number">04 / LAUNCH</div><h3>Review &amp; Launch</h3><p>Test the website, review the final details, and prepare it for publication.</p></article>
+  </div>
+ </div>
+</section>
+<section id="contact" style="padding-top:30px">
+ <div class="container">
+  <div class="contact-box"><div><div class="kicker">GET IN TOUCH</div><h2>Have a Project in Mind?</h2><p>Let's discuss your idea and explore how a professional website can help your business establish a stronger online presence.</p></div><div class="contact-links">
+<a class="btn contact-icon-btn" href="https://wa.me/2349045681648?text=Hello%20Victor%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20website%20project." target="_blank" rel="noopener" aria-label="Contact me on WhatsApp"><svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.3-4.7A8.5 8.5 0 1 1 20.5 11.8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.4 7.7c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .6.5.9 1.3 1.6 2.2 2.1.2.1.4.1.6-.1l.8-.9c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5 0 .5-.2 1.1-.6 1.4-.5.5-1.2.7-1.9.6-1.1-.2-2.4-.9-3.7-2.1-1.1-1-2.1-2.5-2.3-3.5-.2-.9.1-1.8.4-2.4Z" fill="currentColor"/></svg><span>WhatsApp</span></a>
+<a class="btn btn-outline contact-icon-btn" href="mailto:charlesvictor326@gmail.com?subject=Website%20Project%20Enquiry" aria-label="Send me an email"><svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Email</span></a>
+<a class="btn btn-outline contact-icon-btn" href="https://www.linkedin.com/in/victor-charles-472595447" target="_blank" rel="noopener" aria-label="Visit my LinkedIn profile"><svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7 10v7M7 7.2v.1M11 17v-7h3v1.1c.5-.9 1.2-1.3 2.2-1.3 1.7 0 2.8 1.1 2.8 3.2V17h-3v-3.7c0-.9-.3-1.5-1.1-1.5s-1 .6-1 1.5V17Z" fill="currentColor" stroke="currentColor" stroke-width=".6" stroke-linecap="round"/></svg><span>LinkedIn</span></a>
+<a class="btn btn-outline contact-icon-btn" href="https://x.com/victorcharles24" target="_blank" rel="noopener" aria-label="Visit my X profile"><svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4.3l9.7 16h-4.3L5 4Zm0 16 6.2-7.3M12.8 11.3 19 4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>X</span></a>
+</div></div>
+ </div>
+</section>
+</main>
+<footer><div class="container"><div class="footer-row"><a class="brand" href="#home"><span class="logo">VC</span><span><span class="brand-name">Victorcharles</span><span class="brand-sub">WEB STUDIO</span></span></a><p class="footer-desc">Creating modern digital experiences for businesses, startups, and entrepreneurs.</p><nav class="footer-nav" aria-label="Footer navigation"><a href="#home">Home</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a></nav><div><a href="https://www.linkedin.com/in/victor-charles-472595447" target="_blank" rel="noopener" aria-label="LinkedIn">in</a> &nbsp; <a href="https://x.com/victorcharles24" target="_blank" rel="noopener" aria-label="X">𝕏</a></div></div><div class="copyright">© <span id="year"></span> Victorcharles Web Studio. All rights reserved.</div></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div id="demoOverlay" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(2,7,18,.88);padding:10px">
+  <div style="position:relative;width:100%;height:100%;max-width:1200px;margin:auto;background:#0b1020;border-radius:14px;overflow:hidden">
+    <button id="closeDemoOverlay" type="button" aria-label="Close demo" style="position:absolute;right:12px;top:12px;z-index:2;border:0;border-radius:50%;width:42px;height:42px;background:#fff;color:#111;font-size:25px;cursor:pointer">×</button>
+    <iframe id="demoFrame" title="Interactive project demo" style="width:100%;height:100%;border:0" sandbox="allow-scripts allow-forms allow-same-origin"></iframe>
+  </div>
+</div>
+
+<script>
+(function(){
+ const menuBtn=document.getElementById('menuBtn');
+ const nav=document.getElementById('navlinks');
+ menuBtn.addEventListener('click',function(){
+   const open=nav.classList.toggle('open');
+   menuBtn.setAttribute('aria-expanded',String(open));
+   menuBtn.textContent=open?'×':'☰';
+ });
+ nav.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';});});
+ document.getElementById('year').textContent=new Date().getFullYear();
+ const demoOverlay=document.getElementById('demoOverlay');
+ const demoFrame=document.getElementById('demoFrame');
+ const embeddedDemoHTML = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>Victorcharles Web Studio | Demo Hub<\/title>\n<style>\n:root{--navy:#091224;--panel:#121f36;--blue:#4ca8ff;--purple:#8d70ff;--text:#f5f7ff;--muted:#afbdd2}\n*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6fb;color:#20263a}button,input{font:inherit}button,a{cursor:pointer}a{text-decoration:none;color:inherit}\n.hidden{display:none!important}.hub{min-height:100vh;background:radial-gradient(circle at top right,#1b3262,var(--navy) 60%);color:var(--text);padding:22px}\n.hubnav,.demoNav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;max-width:1050px;margin:auto}.brand{font-weight:800;font-size:19px}.brand span{color:var(--blue)}.hubmain{max-width:950px;margin:65px auto}.eyebrow{font-size:12px;letter-spacing:2px;color:#b9aaff;font-weight:bold;text-transform:uppercase}h1{font-size:clamp(35px,7vw,65px);line-height:1.05;margin:15px 0}p{line-height:1.65;color:var(--muted)}.hubcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:17px;margin-top:35px}.hubcard{background:rgba(18,31,54,.95);border:1px solid #2a4165;border-radius:18px;padding:24px}.hubcard h2{margin-top:8px}.tag{display:inline-block;background:#23385b;color:#c6e2ff;border-radius:30px;padding:6px 10px;font-size:12px}.primary,.secondary{border:0;border-radius:10px;padding:12px 16px;font-weight:bold;display:inline-block}.primary{background:linear-gradient(100deg,var(--blue),var(--purple));color:white}.secondary{background:#e8ecf5;color:#20263a}.backbtn{border:1px solid #526483;background:#172742;color:white;border-radius:9px;padding:10px 13px}\n.demo{min-height:100vh}.demoNav{padding:16px 5%;max-width:none}.demoNav a{margin-left:14px}.shop{background:#f5f6fa;color:#202536}.shop .demoNav{background:#171b2c;color:white}.shop .brand{color:#ffb84d}.shopwrap{max-width:1100px;margin:auto;padding:20px 4%}.shophero{background:linear-gradient(110deg,#232d58,#6d4ce0);color:white;border-radius:18px;padding:27px;margin:10px 0 20px}.shophero h1{font-size:clamp(29px,5vw,45px);margin:10px 0}.shophero p{color:#f0efff}.searchrow{display:flex;gap:8px;margin-top:16px}.searchrow input,.taskinput{flex:1;min-width:0;padding:12px;border:1px solid #d4d8e3;border-radius:9px;font-size:16px}.shopbtn{background:#ff9e27;color:#202536;border:0;padding:12px 15px;border-radius:9px;font-weight:bold}.chips,.filters{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.chip{border:1px solid #d8dbe5;background:white;border-radius:30px;padding:9px 13px}.chip.active{background:#232d58;color:white}.shopheading{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:13px}.product{background:white;border:1px solid #e4e6ed;border-radius:13px;overflow:hidden}.productpic{height:110px;display:grid;place-items:center;font-size:47px;background:linear-gradient(140deg,#e8efff,#fff0db)}.productdetails{padding:12px}.productdetails h3{font-size:15px;margin:6px 0}.price{font-weight:bold;color:#d65c20;font-size:18px}.muted{color:#737b8d;font-size:13px}.productrow{display:flex;gap:6px;margin-top:10px}.productrow button{flex:1;border:0;border-radius:7px;padding:9px 5px;font-weight:bold}.add{background:#222d57;color:white}.wish{background:#f0f1f6}.shopPanel{background:white;border:1px solid #e3e5ed;border-radius:13px;padding:15px;margin:20px 0}.cartitem{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #eee}.smallbtn{border:0;background:#eceff6;padding:6px 9px;border-radius:6px}.taskdemo{background:#0b1020;color:#f5f7ff}.taskdemo .demoNav{border-bottom:1px solid #26304b}.taskdemo .brand{color:#8ac5ff}.taskwrap{max-width:850px;margin:auto;padding:35px 5%}.taskpanel,.stat{background:#141e35;border:1px solid #293958;border-radius:14px;padding:17px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}.stat strong{display:block;font-size:25px;margin-bottom:5px}.taskinput{background:#0d1528;border-color:#344363;color:white}.taskAddRow{display:flex;gap:8px;margin:15px 0}.taskAdd{background:linear-gradient(100deg,#4eabff,#8b72ff);color:white;border:0;border-radius:9px;padding:12px 15px;font-weight:bold}.filter{background:#202c47;border:1px solid #394967;color:white;border-radius:30px;padding:9px 13px}.filter.active{background:#6557c9}.taskrow{display:flex;align-items:center;gap:10px;padding:13px 0;border-bottom:1px solid #29334b}.taskrow label{flex:1;overflow-wrap:anywhere}.taskrow.done label{text-decoration:line-through;color:#8290aa}.delete{border:0;background:#38233a;color:#ffc7d3;padding:8px 10px;border-radius:7px}.empty{padding:16px 0;color:var(--muted)}footer{text-align:center;padding:24px;color:var(--muted)}\n@media(max-width:480px){.hub{padding:18px}.hubmain{margin:45px auto}.searchrow,.taskAddRow{flex-direction:column}.stats{grid-template-columns:1fr}.demoNav{align-items:flex-start}.demoNav nav{width:100%}.demoNav a{margin:0 12px 0 0}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.productpic{height:95px}}\n<\/style>\n<\/head>\n<body>\n<!-- Main hub: both demos are inside this one file, so there are no missing-page links. -->\n<section id=\"home\" class=\"hub\">\n  <header class=\"hubnav\"><div class=\"brand\">VC <span>/<\/span> Victorcharles Web Studio<\/div><div style=\"color:#afbdd2\">Interactive Demo Hub<\/div><\/header>\n  <main class=\"hubmain\">\n    <div class=\"eyebrow\">Choose a demo<\/div>\n    <h1>Which project would you like to explore?<\/h1>\n    <p>Tap either button below. Each demo opens inside this same webpage, so you do not need to download or link separate files.<\/p>\n    <div class=\"hubcards\">\n      <article class=\"hubcard\"><span class=\"tag\">Shopping marketplace<\/span><h2>StyleNest<\/h2><p>Browse sample products, search categories, save favourites, and try the shopping cart. No payments or real orders.<\/p><button class=\"primary\" onclick=\"openDemo('shop')\">Open StyleNest →<\/button><\/article>\n      <article class=\"hubcard\"><span class=\"tag\">Productivity app<\/span><h2>TaskFlow AI<\/h2><p>Add tasks, mark them complete, delete them, filter the list, and track your progress. This is not connected to a real AI service.<\/p><button class=\"primary\" onclick=\"openDemo('tasks')\">Open TaskFlow AI →<\/button><\/article>\n    <\/div>\n  <\/main>\n  <footer>Victorcharles Web Studio<\/footer>\n<\/section>\n\n<section id=\"shop\" class=\"demo shop hidden\">\n  <header class=\"demoNav\"><a class=\"brand\" href=\"#\" onclick=\"openDemo('home');return false\">StyleNest ✦<\/a><nav><a href=\"#shopCart\" style=\"color:white\">Cart (<span id=\"cartCount\">0<\/span>)<\/a><\/nav><\/header>\n  <main class=\"shopwrap\">\n    <section class=\"shophero\"><div style=\"font-weight:bold;color:#ffd99c\">STYLE THAT FITS YOUR LIFE<\/div><h1>Discover your next favourite thing.<\/h1><p>Explore fashion, tech, beauty and home picks in this marketplace demo.<\/p><div class=\"searchrow\"><input id=\"search\" placeholder=\"Search products or categories…\" aria-label=\"Search products\"><button class=\"shopbtn\" onclick=\"renderProducts()\">Search<\/button><\/div><\/section>\n    <div class=\"shopheading\"><h2>Shop by category<\/h2><span class=\"muted\">Demo items · no checkout<\/span><\/div><div class=\"chips\" id=\"chips\"><\/div>\n    <div class=\"shopheading\"><h2 id=\"listingTitle\">Popular picks<\/h2><span class=\"muted\" id=\"resultCount\"><\/span><\/div><section class=\"products\" id=\"products\"><\/section>\n    <section class=\"shopPanel\" id=\"shopCart\"><div class=\"shopheading\"><h2>🛒 Your demo cart<\/h2><button class=\"smallbtn\" onclick=\"clearCart()\">Clear cart<\/button><\/div><div id=\"cartItems\">Your cart is empty.<\/div><h3 id=\"subtotal\">Subtotal: $0.00<\/h3><p class=\"muted\">Demo only. No payments are collected and no orders are placed.<\/p><\/section>\n    <section class=\"shopPanel\"><h2>♡ Wishlist<\/h2><div id=\"wishlist\">No saved products yet.<\/div><\/section>\n  <\/main>\n<\/section>\n\n<section id=\"tasks\" class=\"demo taskdemo hidden\">\n  <header class=\"demoNav\"><a class=\"brand\" href=\"#\" onclick=\"openDemo('home');return false\">TaskFlow AI ✦<\/a><nav><\/nav><\/header>\n  <main class=\"taskwrap\"><div class=\"eyebrow\">YOUR DAY, ORGANIZED<\/div><h1>Make room for <span style=\"color:#8ac5ff\">great work.<\/span><\/h1><p class=\"muted\">Interactive task manager demo. It is not connected to an AI service.<\/p>\n  <section class=\"stats\"><div class=\"stat\"><strong id=\"total\">0<\/strong><span class=\"muted\">Total tasks<\/span><\/div><div class=\"stat\"><strong id=\"completed\">0<\/strong><span class=\"muted\">Completed<\/span><\/div><div class=\"stat\"><strong id=\"remaining\">0<\/strong><span class=\"muted\">Remaining<\/span><\/div><\/section>\n  <section class=\"taskpanel\"><h2>My tasks<\/h2><form class=\"taskAddRow\" id=\"taskForm\"><input class=\"taskinput\" id=\"taskInput\" placeholder=\"e.g. Finish my portfolio homepage\" maxlength=\"140\" required><button class=\"taskAdd\">+ Add task<\/button><\/form><div class=\"filters\"><button class=\"filter active\" data-filter=\"all\" type=\"button\">All<\/button><button class=\"filter\" data-filter=\"active\" type=\"button\">Active<\/button><button class=\"filter\" data-filter=\"completed\" type=\"button\">Completed<\/button><\/div><div id=\"taskList\"><\/div><\/section><\/main>\n<\/section>\n<script>\nfunction openDemo(which){['home','shop','tasks'].forEach(id=>document.getElementById(id).classList.toggle('hidden',id!==which));window.scrollTo(0,0);if(which==='shop')renderProducts();if(which==='tasks')renderTasks()}\n\nconst productsData=[\n{id:1,name:'Everyday Streetwear Hoodie',cat:'Fashion',price:24.90,icon:'🧥'},{id:2,name:'Classic Sneakers',cat:'Fashion',price:32.50,icon:'👟'},{id:3,name:'Minimal Wristwatch',cat:'Accessories',price:18.75,icon:'⌚'},{id:4,name:'Wireless Headphones',cat:'Tech',price:27.99,icon:'🎧'},{id:5,name:'Smart Fitness Band',cat:'Tech',price:21.50,icon:'⌚'},{id:6,name:'Skincare Starter Set',cat:'Beauty',price:16.25,icon:'🧴'},{id:7,name:'Everyday Backpack',cat:'Accessories',price:29,icon:'🎒'},{id:8,name:'Ceramic Coffee Mug',cat:'Home',price:8.50,icon:'☕'},{id:9,name:'Desk LED Lamp',cat:'Home',price:19.99,icon:'💡'},{id:10,name:'Sunglasses',cat:'Accessories',price:12,icon:'🕶️'},{id:11,name:'Portable Bluetooth Speaker',cat:'Tech',price:23.40,icon:'🔊'},{id:12,name:'Beauty Makeup Kit',cat:'Beauty',price:20,icon:'💄'}];\nlet activeCategory='All',cart={},wishlist=new Set();\nfunction renderChips(){let cats=['All',...new Set(productsData.map(p=>p.cat))];document.getElementById('chips').innerHTML=cats.map(c=>`<button class=\"chip ${c===activeCategory?'active':''}\" onclick=\"activeCategory='${c}';renderChips();renderProducts()\">${c}<\/button>`).join('')}\nfunction renderProducts(){let q=document.getElementById('search').value.toLowerCase().trim();let list=productsData.filter(p=>(activeCategory==='All'||p.cat===activeCategory)&&(p.name+' '+p.cat).toLowerCase().includes(q));document.getElementById('products').innerHTML=list.map(p=>`<article class=\"product\"><div class=\"productpic\">${p.icon}<\/div><div class=\"productdetails\"><div class=\"muted\">${p.cat}<\/div><h3>${p.name}<\/h3><div class=\"price\">$${p.price.toFixed(2)}<\/div><div class=\"productrow\"><button class=\"add\" onclick=\"addToCart(${p.id})\">Add to cart<\/button><button class=\"wish\" onclick=\"toggleWish(${p.id})\">${wishlist.has(p.id)?'♥':'♡'}<\/button><\/div><\/div><\/article>`).join('')||'<p>No matching products. Try another search.<\/p>';document.getElementById('resultCount').textContent=list.length+' items';document.getElementById('listingTitle').textContent=activeCategory==='All'?'Popular picks':activeCategory;renderCart();renderWishlist()}\nfunction addToCart(id){cart[id]=(cart[id]||0)+1;renderCart()}function changeQty(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];renderCart()}function clearCart(){cart={};renderCart()}\nfunction renderCart(){let ids=Object.keys(cart);document.getElementById('cartCount').textContent=ids.reduce((s,id)=>s+cart[id],0);document.getElementById('cartItems').innerHTML=ids.length?ids.map(id=>{let p=productsData.find(x=>x.id==id);return `<div class=\"cartitem\"><div>${p.icon} ${p.name}<br><span class=\"muted\">$${p.price.toFixed(2)} each<\/span><\/div><div><button class=\"smallbtn\" onclick=\"changeQty(${id},-1)\">−<\/button> ${cart[id]} <button class=\"smallbtn\" onclick=\"changeQty(${id},1)\">+<\/button><\/div><\/div>`}).join(''):'Your cart is empty.';let total=ids.reduce((s,id)=>s+productsData.find(p=>p.id==id).price*cart[id],0);document.getElementById('subtotal').textContent='Subtotal: $'+total.toFixed(2)}\nfunction toggleWish(id){wishlist.has(id)?wishlist.delete(id):wishlist.add(id);renderProducts()}function renderWishlist(){let a=[...wishlist].map(id=>productsData.find(p=>p.id===id));document.getElementById('wishlist').innerHTML=a.length?a.map(p=>`${p.icon} ${p.name} <button class=\"smallbtn\" onclick=\"toggleWish(${p.id})\">Remove<\/button>`).join('<br>'):'No saved products yet.'}\ndocument.getElementById('search').addEventListener('keydown',e=>{if(e.key==='Enter')renderProducts()});renderChips();renderProducts();\n\nlet tasks=[];try{tasks=JSON.parse(localStorage.getItem('vc-taskflow-tasks')||'[]')}catch(e){tasks=[]}let taskFilter='all';\nfunction saveTasks(){try{localStorage.setItem('vc-taskflow-tasks',JSON.stringify(tasks))}catch(e){}renderTasks()}\nfunction escapeText(s){return s.replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]))}\nfunction renderTasks(){document.getElementById('total').textContent=tasks.length;document.getElementById('completed').textContent=tasks.filter(t=>t.done).length;document.getElementById('remaining').textContent=tasks.filter(t=>!t.done).length;let list=tasks.filter(t=>taskFilter==='all'||(taskFilter==='active'&&!t.done)||(taskFilter==='completed'&&t.done));document.getElementById('taskList').innerHTML=list.length?list.map(t=>`<div class=\"taskrow ${t.done?'done':''}\"><input type=\"checkbox\" ${t.done?'checked':''} aria-label=\"Complete task\" onchange=\"toggleTask('${t.id}')\"><label>${escapeText(t.text)}<\/label><button class=\"delete\" onclick=\"deleteTask('${t.id}')\">Delete<\/button><\/div>`).join(''):'<div class=\"empty\">No tasks here yet. Add a task above to get started.<\/div>'}\nfunction toggleTask(id){let t=tasks.find(t=>String(t.id)===id);if(t)t.done=!t.done;saveTasks()}function deleteTask(id){tasks=tasks.filter(t=>String(t.id)!==id);saveTasks()}\ndocument.getElementById('taskForm').addEventListener('submit',e=>{e.preventDefault();let input=document.getElementById('taskInput'),text=input.value.trim();if(text){tasks.unshift({id:String(Date.now()+Math.random()),text,done:false});input.value='';saveTasks();input.focus()}});\ndocument.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{taskFilter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));renderTasks()}));renderTasks();\nwindow.addEventListener('message',function(event){if(event.data&&event.data.openDemo&&(event.data.openDemo==='shop'||event.data.openDemo==='tasks')){openDemo(event.data.openDemo);}});\n<\/script>\n<\/body>\n<\/html>";
+ function launchDemo(project){
+   demoOverlay.style.display='block';
+   document.body.style.overflow='hidden';
+   const target = project === 'StyleNest' ? 'shop' : 'tasks';
+   let page = embeddedDemoHTML;
+   // Select the requested section in the HTML before the iframe renders,
+   // so the hub never flashes before the chosen demo.
+   if(target === 'shop'){
+     page = page.replace('<section id="home" class="hub">','<section id="home" class="hub hidden">');
+     page = page.replace('<section id="shop" class="demo shop hidden">','<section id="shop" class="demo shop">');
+   } else {
+     page = page.replace('<section id="home" class="hub">','<section id="home" class="hub hidden">');
+     page = page.replace('<section id="tasks" class="demo taskdemo hidden">','<section id="tasks" class="demo taskdemo">');
+   }
+   demoFrame.srcdoc = page;
+ }
+ function closeDemo(){
+   demoOverlay.style.display='none';
+   demoFrame.srcdoc='';
+   document.body.style.overflow='';
+ }
+ document.querySelectorAll('.demo-btn').forEach(function(btn){
+   btn.addEventListener('click',function(){launchDemo(btn.getAttribute('data-project'));});
+ });
+ document.getElementById('closeDemoOverlay').addEventListener('click',closeDemo);
+ demoOverlay.addEventListener('click',function(e){if(e.target===demoOverlay)closeDemo();});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDemo();});
+ const sections=[...document.querySelectorAll('main section[id]')];
+ const links=[...document.querySelectorAll('.navlinks a')];
+ if('IntersectionObserver' in window){
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(link=>link.classList.toggle('active',link.getAttribute('href')==='#'+entry.target.id));}}),{rootMargin:'-35% 0px -55% 0px'});
+  sections.forEach(section=>observer.observe(section));
+ }
+})();
+</script>
+</body>
+</html>
